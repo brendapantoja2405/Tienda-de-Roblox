@@ -1,3 +1,171 @@
-body{
-    background-attachment: fixed;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* --- ESTRUCTURA GENERAL Y FOOTER ABAJO --- */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* --- NAVBAR FIJO --- */
+.custom-navbar {
+    background-color: rgb(251, 251, 251);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.titulo {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+/* LINKS NAVEGACIÓN */
+.nav-link {
+    color: #666777;
+    position: relative;
+    font-family: "Cause", cursive;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #465e6b;
+}
+
+/* Línea animada */
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background-color: #939475fb;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/* --- CONTENIDO Y TARJETAS --- */
+.container h1 {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-size: 50px;
+    font-style: normal;
+}
+
+.container h2 {
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.card-body h5 {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.card-body p {
+    font-family: "Cause", cursive;
+    font-optical-sizing: auto;
+    font-weight: 450;
+}
+
+/* --- BOTÓN VER CATÁLOGO --- */
+.btn-menu {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.btn-menu:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #111;
+    color: white;
+    padding: 40px 0 10px;
+}
+
+.footer-title {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.footer-subtitle {
+    margin-bottom: 15px;
+    font-family: "Lobster Two", sans-serif;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e67e7e;
+}
+
+.footer-bottom {
+    border-top: 1px solid #b0aaaa;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: "Cause", cursive;
+    font-optical-sizing: auto;
+    font-weight: 450;
+}
+
+.col-md-4 p {
+    font-size: 16px;
+    font-family: "Cause", cursive;
+    font-optical-sizing: auto;
+    font-weight: 450;
 }

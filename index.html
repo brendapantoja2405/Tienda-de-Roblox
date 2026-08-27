@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
     <div class="container">
-        <img src="../Imagenes/roblox-logo.png" width="50" alt="Logo Roblox">
+        <img src="Imagenes/logo_roblox.png" width="50" alt="Logo Roblox">
         <h2 class="titulo">Tienda de Roblox</h2>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -22,13 +22,19 @@
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item"><a class="nav-link" href="../Index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
                 <li class="nav-item"><a class="nav-link active" href="Productos.html">Productos</a></li>
                 <li class="nav-item"><a class="nav-link" href="reservaciones.html">Pases de Gamepass</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link" href="comentarios.html">Comentarios</a></li>
+
+                <!-- Carrito de Compras -->
+                <li class="nav-item ms-lg-3">
+                    <div class="carrito-contenedor nav-link fw-bold d-flex align-items-center gap-1">
+                        <i class="bi bi-cart-fill fs-5"></i>
+                        <span>Total: $<span id="total-carrito">0</span> MXN</span>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -41,11 +47,11 @@
 
         <!-- Producto 1 -->
         <div class="col-md-4">
-            <div class="card h-100">
-                <img src="../Imagenes/robux-1000.webp" class="card-img-top" alt="Tarjeta Robux">
+            <div class="card h-100 tarjeta-producto" data-precio="250">
+                <img src="Imagenes/cofre_articulo.jpeg" class="card-img-top" alt="Tarjeta Robux">
                 <div class="card-body">
-                    <h5 class="card-title">Tarjeta 1,000 Robux</h5>
-                    <p class="card-text">Tarjeta digital de regalo de 1,000 Robux para tu cuenta.</p>
+                    <h5 class="card-title">Cofre de 1,000 Robux</h5>
+                    <p class="card-text">Cofre de madera de regalo de 1,000 Robux para tu cuenta.</p>
                     <p><strong>$250 MXN</strong></p>
                 </div>
             </div>
@@ -53,11 +59,11 @@
 
         <!-- Producto 2 -->
         <div class="col-md-4">
-            <div class="card h-100">
-                <img src="../Imagenes/korblox.jpg" class="card-img-top" alt="Paquete Korblox">
+            <div class="card h-100 tarjeta-producto" data-precio="1200">
+                <img src="Imagenes/cofre_rosa_articulo.png" class="card-img-top" alt="Paquete Korblox">
                 <div class="card-body">
-                    <h5 class="card-title">Paquete Korblox Deathspeaker</h5>
-                    <p class="card-text">Consigue la famosa pierna flotante y avatar de Korblox.</p>
+                    <h5 class="card-title">Cofre de 3,000 Robux</h5>
+                    <p class="card-text">Cofre rosa de regalo de 3,000 Robux para tu cuenta.</p>
                     <p><strong>$1,200 MXN</strong></p>
                 </div>
             </div>
@@ -65,11 +71,11 @@
 
         <!-- Producto 3 -->
         <div class="col-md-4">
-            <div class="card h-100">
-                <img src="../Imagenes/headless.jpg" class="card-img-top" alt="Headless Horseman">
+            <div class="card h-100 tarjeta-producto" data-precio="2500">
+                <img src="Imagenes/diadema_articulo.png" class="card-img-top" alt="Headless Horseman">
                 <div class="card-body">
-                    <h5 class="card-title">Jinete Sin Cabeza (Headless)</h5>
-                    <p class="card-text">El avatar más codiciado de la temporada de Halloween.</p>
+                    <h5 class="card-title">Dominus Frigidus (Objeto Limitado)</h5>
+                    <p class="card-text">Sombrero exclusivo y exclusivo de edición limitada.</p>
                     <p><strong>$2,500 MXN</strong></p>
                 </div>
             </div>
@@ -77,8 +83,8 @@
 
         <!-- Producto 4 -->
         <div class="col-md-4">
-            <div class="card h-100">
-                <img src="../Imagenes/vip-gamepass.jpg" class="card-img-top" alt="Gamepass VIP">
+            <div class="card h-100 tarjeta-producto" data-precio="200">
+                <img src="Imagenes/gato_articulo.png" class="card-img-top" alt="Gamepass VIP">
                 <div class="card-body">
                     <h5 class="card-title">Gamepass VIP Adopt Me!</h5>
                     <p class="card-text">Obtén beneficios exclusivos y casas VIP dentro del juego.</p>
@@ -89,8 +95,8 @@
 
         <!-- Producto 5 -->
         <div class="col-md-4">
-            <div class="card h-100">
-                <img src="../Imagenes/dominus.jpg" class="card-img-top" alt="Dominus Frigidus">
+            <div class="card h-100 tarjeta-producto" data-precio="4500">
+                <img src="Imagenes/lego_articulo.png" class="card-img-top" alt="Dominus Frigidus">
                 <div class="card-body">
                     <h5 class="card-title">Dominus Frigidus (Objeto Limitado)</h5>
                     <p class="card-text">Sombrero exclusivo y exclusivo de edición limitada.</p>
@@ -101,8 +107,8 @@
 
         <!-- Producto 6 -->
         <div class="col-md-4">
-            <div class="card h-100">
-                <img src="../Imagenes/bloxfruits.jpg" class="card-img-top" alt="Fruta Perm">
+            <div class="card h-100 tarjeta-producto" data-precio="750">
+                <img src="Imagenes/gorro_dino_articulo.png" class="card-img-top" alt="Fruta Perm">
                 <div class="card-body">
                     <h5 class="card-title">Fruta Dragón Permanente</h5>
                     <p class="card-text">Fruta mítica permanente para el juego Blox Fruits.</p>
@@ -115,7 +121,7 @@
 </div>
 
 <div class="text-center my-5">
-    <a href="../Imagenes/Catálogo.pdf" class="btn-menu" target="_blank">
+    <a href="" class="btn-menu" target="_blank">
         <i class="bi bi-file-earmark-pdf"></i> Ver Catálogo Completo
     </a>
 </div>
@@ -155,6 +161,8 @@
         <p>© 2026 Tienda de Roblox - Todos los derechos reservados</p>
     </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Java/carrito.js"></script>
 </body>
 </html>

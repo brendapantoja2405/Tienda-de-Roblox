@@ -169,3 +169,32 @@ footer {
     font-optical-sizing: auto;
     font-weight: 450;
 }
+/* Estilos para el Carrito en la Navbar */
+.carrito-contenedor {
+    background-color: #198754;
+    color: #ffffff !important;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.carrito-contenedor:hover {
+    background-color: #157347;
+    transform: scale(1.03);
+}
+
+/* Efecto hover interactivo en las tarjetas de producto */
+.tarjeta-producto {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-producto:active {
+    transform: translateY(-2px);
+}
